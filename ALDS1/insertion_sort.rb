@@ -5,8 +5,8 @@ numbers.each_with_index do | n, i |
     j = i - 1
     while j >= 0 && numbers[ j ] > n
         numbers[ j + 1 ] = numbers[ j ]
-        numbers[ j ] = n
         j -= 1
     end
+    numbers[ j ] = numbers
     puts numbers.join(' ')
 end
