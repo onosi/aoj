@@ -2,18 +2,17 @@ def insertionSort(numbers, n, g)
     for i in (g..(n-1)) do
         v = numbers[i]
         j = i - g
-        while j >= 0 && numbers[ j ] > n
+        while j >= 0 && numbers[ j ] > v
             numbers[ j + g ] = numbers[ j ]
             j -= g
-            $cnt += 1
+            @cnt += 1
         end
         numbers[ j + g ] = v
     end
-    numbers
 end
 
 def shellSort(numbers, n)
-    $cnt = 0
+    @cnt = 0
     g = []
     interval = 1
     begin
@@ -29,7 +28,7 @@ def shellSort(numbers, n)
 
     puts m
     puts g.join(" ")
-    puts $cnt
+    puts @cnt
 end
 
 n = gets.to_i
